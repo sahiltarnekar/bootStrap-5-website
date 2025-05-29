@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tours - ExploreEra Travel & Tourism</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body class="tours-page">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-plane me-2"></i>ExploreEra
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Destinations.html">Destinations</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="tour.html">Tours</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+                <a href="booknow.html" class="btn btn-primary ms-lg-3">Book Now</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <h1 class="display-4 fw-bold">Discover Our Tours</h1>
+            <p class="lead">Find the perfect adventure with our expertly crafted tour packages designed for every type
+                of traveler</p>
+            <a href="#tour-list" class="btn btn-primary btn-lg mt-3">Explore Tours</a>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Tour Filters -->
+        <section class="tour-filters">
+            <div class="row align-items-center">
+                <div class="col-lg-4">
+                    <div class="filter-header">
+                        <h3>Find Your Perfect Tour</h3>
+                        <p>Filter by your preferences</p>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <form>
+                        <div class="row g-3">
+                            <div class="col-md-4">
+                                <label for="destination" class="form-label">Destination</label>
+                                <select class="form-select" id="destination">
+                                    <option selected>Any Destination</option>
+                                    <option>Europe</option>
+                                    <option>Asia</option>
+                                    <option>Africa</option>
+                                    <option>North America</option>
+                                    <option>South America</option>
+                                    <option>Oceania</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="activity" class="form-label">Activity</label>
+                                <select class="form-select" id="activity">
+                                    <option selected>Any Activity</option>
+                                    <option>Adventure</option>
+                                    <option>Beach</option>
+                                    <option>Cultural</option>
+                                    <option>Wildlife</option>
+                                    <option>Culinary</option>
+                                    <option>Luxury</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="duration" class="form-label">Duration</label>
+                                <select class="form-select" id="duration">
+                                    <option selected>Any Duration</option>
+                                    <option>1-3 Days</option>
+                                    <option>4-7 Days</option>
+                                    <option>8-14 Days</option>
+                                    <option>15+ Days</option>
+                                </select>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tour Listing -->
+        <section id="tour-list" class="tour-listing">
+            <div class="d-flex justify-content-between align-items-center mb-5">
+                <h2 class="section-title">Featured Tours</h2>
+                <div class="sorting-options d-flex">
+                    <span class="sort-label">Sort by:</span>
+                    <button class="btn btn-sort active">Popular</button>
+                    <button class="btn btn-sort">Price</button>
+                    <button class="btn btn-sort">Duration</button>
+                    <button class="btn btn-sort">Rating</button>
+                </div>
+            </div>
+
+            <div class="row">
+                <!-- Tour 1 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card tour-card">
+                        <span class="tour-badge">Best Seller</span>
+                        <img src="https://images.unsplash.com/photo-1534008897995-27a23e859048?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                            class="tour-image" alt="Bali Adventure">
+                        <div class="tour-content">
+                            <h3 class="tour-title">Bali Adventure & Culture Tour</h3>
+                            <div class="tour-meta">
+                                <div class="tour-duration"><i class="fas fa-clock"></i> 10 Days</div>
+                                <div class="tour-group"><i class="fas fa-user-friends"></i> Max 12 People</div>
+                            </div>
+                            <p class="tour-description">Experience the magic of Bali with this comprehensive tour
+                                covering temples, volcanoes, rice terraces, and pristine beaches.</p>
+                            <div class="tour-tags">
+                                <span class="badge">Adventure</span>
+                                <span class="badge">Cultural</span>
+                                <span class="badge">Beach</span>
+                            </div>
+                            <div class="tour-footer">
+                                <div class="tour-price">$1,499 <span>per person</span></div>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                    <span>4.7</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tour 2 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card tour-card">
+                        <img src="https://images.unsplash.com/photo-1518391846015-55a9cc003b25?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                            class="tour-image" alt="Machu Picchu Trek">
+                        <div class="tour-content">
+                            <h3 class="tour-title">Machu Picchu Trekking Adventure</h3>
+                            <div class="tour-meta">
+                                <div class="tour-duration"><i class="fas fa-clock"></i> 12 Days</div>
+                                <div class="tour-group"><i class="fas fa-user-friends"></i> Max 15 People</div>
+                            </div>
+                            <p class="tour-description">Journey through the Andes to discover the lost city of the Incas
+                                on this unforgettable trekking experience.</p>
+                            <div class="tour-tags">
+                                <span class="badge">Adventure</span>
+                                <span class="badge">Trekking</span>
+                                <span class="badge">Historical</span>
+                            </div>
+                            <div class="tour-footer">
+                                <div class="tour-price">$1,899 <span>per person</span></div>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <span>5.0</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tour 3 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card tour-card">
+                        <span class="tour-badge">New</span>
+                        <img src="https://images.unsplash.com/photo-1533106497176-45ae19e68ba2?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                            class="tour-image" alt="Safari">
+                        <div class="tour-content">
+                            <h3 class="tour-title">Tanzania Luxury Safari</h3>
+                            <div class="tour-meta">
+                                <div class="tour-duration"><i class="fas fa-clock"></i> 9 Days</div>
+                                <div class="tour-group"><i class="fas fa-user-friends"></i> Max 8 People</div>
+                            </div>
+                            <p class="tour-description">Experience the Great Migration in style with our luxury safari
+                                package featuring premium lodges and expert guides.</p>
+                            <div class="tour-tags">
+                                <span class="badge">Wildlife</span>
+                                <span class="badge">Luxury</span>
+                                <span class="badge">Photography</span>
+                            </div>
+                            <div class="tour-footer">
+                                <div class="tour-price">$3,499 <span>per person</span></div>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <span>4.2</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tour 4 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card tour-card">
+                        <img src="https://images.unsplash.com/photo-1503917988258-f87a78e3c995?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
+                            class="tour-image" alt="Santorini">
+                        <div class="tour-content">
+                            <h3 class="tour-title">Greek Island Hopping</h3>
+                            <div class="tour-meta">
+                                <div class="tour-duration"><i class="fas fa-clock"></i> 14 Days</div>
+                                <div class="tour-group"><i class="fas fa-user-friends"></i> Max 20 People</div>
+                            </div>
+                            <p class="tour-description">Explore the stunning Greek islands of Santorini, Mykonos, and
+                                Crete on this unforgettable Mediterranean journey.</p>
+                            <div class="tour-tags">
+                                <span class="badge">Beach</span>
+                                <span class="badge">Cultural</span>
+                                <span class="badge">Romantic</span>
+                            </div>
+                            <div class="tour-footer">
+                                <div class="tour-price">$2,299 <span>per person</span></div>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                    <span>4.6</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tour 5 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card tour-card">
+                        <span class="tour-badge">Family Friendly</span>
+                        <img src="https://images.unsplash.com/photo-1543429776-2782fc586c9a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                            class="tour-image" alt="New York">
+                        <div class="tour-content">
+                            <h3 class="tour-title">New York City Experience</h3>
+                            <div class="tour-meta">
+                                <div class="tour-duration"><i class="fas fa-clock"></i> 6 Days</div>
+                                <div class="tour-group"><i class="fas fa-user-friends"></i> Max 15 People</div>
+                            </div>
+                            <p class="tour-description">Discover the Big Apple with our comprehensive tour covering
+                                iconic landmarks, museums, and culinary experiences.</p>
+                            <div class="tour-tags">
+                                <span class="badge">Urban</span>
+                                <span class="badge">Cultural</span>
+                                <span class="badge">Shopping</span>
+                            </div>
+                            <div class="tour-footer">
+                                <div class="tour-price">$1,099 <span>per person</span></div>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <span>4.0</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tour 6 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card tour-card">
+                        <img src="https://images.unsplash.com/photo-1523482580672-f109ba8cb9be?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                            class="tour-image" alt="Kyoto">
+                        <div class="tour-content">
+                            <h3 class="tour-title">Japan Cultural Journey</h3>
+                            <div class="tour-meta">
+                                <div class="tour-duration"><i class="fas fa-clock"></i> 12 Days</div>
+                                <div class="tour-group"><i class="fas fa-user-friends"></i> Max 10 People</div>
+                            </div>
+                            <p class="tour-description">Immerse yourself in Japanese culture with visits to Tokyo,
+                                Kyoto, and Osaka including temples, tea ceremonies, and cuisine.</p>
+                            <div class="tour-tags">
+                                <span class="badge">Cultural</span>
+                                <span class="badge">Culinary</span>
+                                <span class="badge">Historical</span>
+                            </div>
+                            <div class="tour-footer">
+                                <div class="tour-price">$2,799 <span>per person</span></div>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <span>5.0</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pagination -->
+            <nav class="d-flex justify-content-center mt-5">
+                <ul class="pagination">
+                    <li class="page-item"><a class="page-link" href="#"><i class="fas fa-chevron-left"></i></a></li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item active"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#"><i class="fas fa-chevron-right"></i></a></li>
+                </ul>
+            </nav>
+        </section>
+    </div>
+
+    <!-- Testimonials -->
+    <section class="testimonials-section">
+        <div class="container">
+            <h2 class="section-title">Traveler Testimonials</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="testimonial-card">
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"The Bali Adventure tour exceeded all our expectations. Our guide
+                            was knowledgeable and made every moment special. Can't wait to book our next trip with
+                            ExploreEra!"</p>
+                        <div class="user">
+                            <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Jessica L.">
+                            <div class="user-info">
+                                <h6>Jessica L.</h6>
+                                <small>Bali Adventure Tour</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="testimonial-card">
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <p class="testimonial-text">"The Machu Picchu trek was challenging but incredibly rewarding. The
+                            scenery was breathtaking and our guide's knowledge of Inca history made the experience
+                            unforgettable."</p>
+                        <div class="user">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Robert K.">
+                            <div class="user-info">
+                                <h6>Robert K.</h6>
+                                <small>Machu Picchu Trek</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="testimonial-card">
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"Our Tanzania safari was the trip of a lifetime! We saw all the Big
+                            Five and stayed in incredible lodges. The attention to detail from ExploreEra made
+                            everything seamless."</p>
+                        <div class="user">
+                            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Emily R.">
+                            <div class="user-info">
+                                <h6>Emily R.</h6>
+                                <small>Tanzania Safari</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter-section">
+        <div class="container">
+            <h2>Get Travel Inspiration</h2>
+            <p>Subscribe to our newsletter for exclusive deals, travel tips, and destination guides</p>
+            <form class="newsletter-form d-flex">
+                <input type="email" class="form-control" placeholder="Your email address">
+                <button type="submit" class="btn">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h5>ExploreEra</h5>
+                    <p>Making travel dreams come true since 2010. We specialize in creating unforgettable experiences
+                        around the globe.</p>
+                    <div class="social-icons mt-4">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5>Quick Links</h5>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="Destinations.html">Destinations</a></li>
+                        <li><a href="#">Tours</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5>Support</h5>
+                    <ul>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Booking Policy</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <h5>Contact Info</h5>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt me-2"></i> 123 Travel Street, New York, NY 10001</li>
+                        <li><i class="fas fa-phone me-2"></i> +1 (555) 123-4567</li>
+                        <li><i class="fas fa-envelope me-2"></i> info@exploreera.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p class="mb-0">&copy; 2023 ExploreEra. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Simple script to handle sort buttons
+        document.addEventListener('DOMContentLoaded', function () {
+            const sortButtons = document.querySelectorAll('.btn-sort');
+
+            sortButtons.forEach(button => {
+                button.addEventListener('click', function () {
+                    // Remove active class from all buttons
+                    sortButtons.forEach(btn => btn.classList.remove('active'));
+
+                    // Add active class to clicked button
+                    this.classList.add('active');
+
+                    // Here you would typically sort the tours based on the selected criteria
+                    // For this demo, we're just updating the UI
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destinations - ExploreEra Travel & Tourism</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-plane me-2"></i>ExploreEra
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="Destinations.html">Destinations</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="tour.html">Tours</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+                <a href="booknow.html" class="btn btn-primary ms-lg-3">Book Now</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <h1 class="display-4 fw-bold">Explore Our Destinations</h1>
+            <p class="lead">Discover the world's most breathtaking places with our expertly curated travel experiences
+            </p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Filter Bar -->
+        <div class="filter-bar">
+            <div class="row g-3 align-items-center">
+                <div class="col-md-4">
+                    <h5 class="mb-3">Find Your Perfect Destination</h5>
+                    <p class="text-muted">Filter by your preferences</p>
+                </div>
+                <div class="col-md-8">
+                    <div class="row g-3">
+                        <div class="col-md-4">
+                            <select class="form-select">
+                                <option selected>All Continents</option>
+                                <option>Europe</option>
+                                <option>Asia</option>
+                                <option>Africa</option>
+                                <option>North America</option>
+                                <option>South America</option>
+                                <option>Oceania</option>
+                            </select>
+                        </div>
+                        <div class="col-md-4">
+                            <select class="form-select">
+                                <option selected>All Activities</option>
+                                <option>Beach</option>
+                                <option>Adventure</option>
+                                <option>Cultural</option>
+                                <option>Wildlife</option>
+                                <option>Culinary</option>
+                                <option>Luxury</option>
+                            </select>
+                        </div>
+                        <div class="col-md-4">
+                            <select class="form-select">
+                                <option selected>Price Range</option>
+                                <option>Under $1,000</option>
+                                <option>$1,000 - $2,500</option>
+                                <option>$2,500 - $5,000</option>
+                                <option>Over $5,000</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Destination Categories -->
+        <section class="py-4">
+            <h2 class="section-title">Destination Categories</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card category-card">
+                        <img src="https://images.unsplash.com/photo-1507699622108-4be3abd695ad?ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80"
+                            class="card-img-top category-img" alt="Beach Destinations">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Beach Getaways</h5>
+                            <p class="card-text">Relax on pristine shores and turquoise waters</p>
+                            <a href="#" class="btn btn-outline-primary">Explore</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card category-card">
+                        <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                            class="card-img-top category-img" alt="Mountain Adventures">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Mountain Adventures</h5>
+                            <p class="card-text">Thrilling experiences in majestic landscapes</p>
+                            <a href="#" class="btn btn-outline-primary">Explore</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card category-card">
+                        <img src="https://images.unsplash.com/photo-1501555088652-021faa106b9b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                            class="card-img-top category-img" alt="Cultural Experiences">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Cultural Experiences</h5>
+                            <p class="card-text">Immerse yourself in rich traditions and history</p>
+                            <a href="#" class="btn btn-outline-primary">Explore</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Continent Tabs -->
+        <section class="py-5">
+            <ul class="nav nav-tabs continent-tabs justify-content-center mb-5">
+                <li class="nav-item">
+                    <a class="nav-link active" data-bs-toggle="tab" href="#all">All Destinations</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-bs-toggle="tab" href="#europe">Europe</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-bs-toggle="tab" href="#asia">Asia</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-bs-toggle="tab" href="#americas">Americas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-bs-toggle="tab" href="#africa">Africa</a>
+                </li>
+            </ul>
+
+            <div class="tab-content">
+                <div class="tab-pane fade show active" id="all">
+                    <div class="row">
+                        <!-- Destination 1 -->
+                        <div class="col-lg-4 col-md-6">
+                            <div class="card destination-card">
+                                <span class="feature-badge">Popular</span>
+                                <img src="https://images.unsplash.com/photo-1503917988258-f87a78e3c995?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
+                                    class="card-img-top destination-img" alt="Santorini">
+                                <div class="card-body">
+                                    <h5 class="card-title">Santorini, Greece</h5>
+                                    <div class="rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                        <span class="ms-2">4.5 (128 reviews)</span>
+                                    </div>
+                                    <p class="card-text">Experience the stunning white-washed buildings and breathtaking
+                                        sunsets of this iconic Greek island.</p>
+                                    <div class="mb-3">
+                                        <span class="badge-custom"><i class="fas fa-umbrella-beach me-1"></i>
+                                            Beach</span>
+                                        <span class="badge-custom"><i class="fas fa-heart me-1"></i> Romantic</span>
+                                        <span class="badge-custom"><i class="fas fa-camera me-1"></i> Scenic</span>
+                                    </div>
+                                    <div class="destination-meta">
+                                        <div>
+                                            <i class="fas fa-clock me-1"></i> 7 days
+                                        </div>
+                                        <div>
+                                            <span class="price fw-bold">$1,299</span> per person
+                                        </div>
+                                    </div>
+                                    <a href="#" class="btn btn-primary w-100 mt-3">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Destination 2 -->
+                        <div class="col-lg-4 col-md-6">
+                            <div class="card destination-card">
+                                <img src="https://images.unsplash.com/photo-1523482580672-f109ba8cb9be?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                                    class="card-img-top destination-img" alt="Kyoto">
+                                <div class="card-body">
+                                    <h5 class="card-title">Kyoto, Japan</h5>
+                                    <div class="rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <span class="ms-2">5.0 (94 reviews)</span>
+                                    </div>
+                                    <p class="card-text">Discover ancient temples, traditional tea houses, and the
+                                        beautiful cherry blossoms of Kyoto.</p>
+                                    <div class="mb-3">
+                                        <span class="badge-custom"><i class="fas fa-torii-gate me-1"></i>
+                                            Cultural</span>
+                                        <span class="badge-custom"><i class="fas fa-tree me-1"></i> Nature</span>
+                                        <span class="badge-custom"><i class="fas fa-utensils me-1"></i> Culinary</span>
+                                    </div>
+                                    <div class="destination-meta">
+                                        <div>
+                                            <i class="fas fa-clock me-1"></i> 10 days
+                                        </div>
+                                        <div>
+                                            <span class="price fw-bold">$2,499</span> per person
+                                        </div>
+                                    </div>
+                                    <a href="#" class="btn btn-primary w-100 mt-3">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Destination 3 -->
+                        <div class="col-lg-4 col-md-6">
+                            <div class="card destination-card">
+                                <span class="feature-badge">Adventure</span>
+                                <img src="https://images.unsplash.com/photo-1518391846015-55a9cc003b25?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                                    class="card-img-top destination-img" alt="Machu Picchu">
+                                <div class="card-body">
+                                    <h5 class="card-title">Machu Picchu, Peru</h5>
+                                    <div class="rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                        <span class="ms-2">4.0 (76 reviews)</span>
+                                    </div>
+                                    <p class="card-text">Journey to the lost city of the Incas and marvel at this
+                                        architectural wonder in the Andes.</p>
+                                    <div class="mb-3">
+                                        <span class="badge-custom"><i class="fas fa-hiking me-1"></i> Trekking</span>
+                                        <span class="badge-custom"><i class="fas fa-history me-1"></i> Historical</span>
+                                        <span class="badge-custom"><i class="fas fa-mountain me-1"></i> Adventure</span>
+                                    </div>
+                                    <div class="destination-meta">
+                                        <div>
+                                            <i class="fas fa-clock me-1"></i> 12 days
+                                        </div>
+                                        <div>
+                                            <span class="price fw-bold">$1,899</span> per person
+                                        </div>
+                                    </div>
+                                    <a href="#" class="btn btn-primary w-100 mt-3">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Destination 4 -->
+                        <div class="col-lg-4 col-md-6">
+                            <div class="card destination-card">
+                                <img src="https://images.unsplash.com/photo-1534008897995-27a23e859048?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                                    class="card-img-top destination-img" alt="Bali">
+                                <div class="card-body">
+                                    <h5 class="card-title">Bali, Indonesia</h5>
+                                    <div class="rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                        <span class="ms-2">4.5 (142 reviews)</span>
+                                    </div>
+                                    <p class="card-text">Experience the perfect blend of beaches, temples, and vibrant
+                                        culture in the Island of Gods.</p>
+                                    <div class="mb-3">
+                                        <span class="badge-custom"><i class="fas fa-umbrella-beach me-1"></i>
+                                            Beach</span>
+                                        <span class="badge-custom"><i class="fas fa-spa me-1"></i> Wellness</span>
+                                        <span class="badge-custom"><i class="fas fa-water me-1"></i> Surfing</span>
+                                    </div>
+                                    <div class="destination-meta">
+                                        <div>
+                                            <i class="fas fa-clock me-1"></i> 14 days
+                                        </div>
+                                        <div>
+                                            <span class="price fw-bold">$1,599</span> per person
+                                        </div>
+                                    </div>
+                                    <a href="#" class="btn btn-primary w-100 mt-3">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Destination 5 -->
+                        <div class="col-lg-4 col-md-6">
+                            <div class="card destination-card">
+                                <span class="feature-badge">Luxury</span>
+                                <img src="https://images.unsplash.com/photo-1533106497176-45ae19e68ba2?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                                    class="card-img-top destination-img" alt="Safari">
+                                <div class="card-body">
+                                    <h5 class="card-title">Serengeti, Tanzania</h5>
+                                    <div class="rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <span class="ms-2">5.0 (68 reviews)</span>
+                                    </div>
+                                    <p class="card-text">Witness the Great Migration and experience wildlife like never
+                                        before in this African paradise.</p>
+                                    <div class="mb-3">
+                                        <span class="badge-custom"><i class="fas fa-paw me-1"></i> Wildlife</span>
+                                        <span class="badge-custom"><i class="fas fa-camera me-1"></i> Photography</span>
+                                        <span class="badge-custom"><i class="fas fa-crown me-1"></i> Luxury</span>
+                                    </div>
+                                    <div class="destination-meta">
+                                        <div>
+                                            <i class="fas fa-clock me-1"></i> 10 days
+                                        </div>
+                                        <div>
+                                            <span class="price fw-bold">$3,499</span> per person
+                                        </div>
+                                    </div>
+                                    <a href="#" class="btn btn-primary w-100 mt-3">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Destination 6 -->
+                        <div class="col-lg-4 col-md-6">
+                            <div class="card destination-card">
+                                <img src="https://th.bing.com/th/id/R.5b28c1fd91f9ee8a65981359332b7076?rik=Y7iPOosgwyCCxw&riu=http%3a%2f%2fwww.experiencify.com%2fwp-content%2fuploads%2f2015%2f02%2fnew-york.jpg&ehk=jTfdZL4HbRoqXHwEBP17ovrSfjt8KBuvyV9uLklFqJY%3d&risl=1&pid=ImgRaw&r=0"
+                                    class="card-img-top destination-img" alt="New York">
+                                <div class="card-body">
+                                    <h5 class="card-title">New York City, USA</h5>
+                                    <div class="rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                        <span class="ms-2">4.0 (210 reviews)</span>
+                                    </div>
+                                    <p class="card-text">Experience the energy of the city that never sleeps with its
+                                        iconic landmarks and diverse culture.</p>
+                                    <div class="mb-3">
+                                        <span class="badge-custom"><i class="fas fa-city me-1"></i> Urban</span>
+                                        <span class="badge-custom"><i class="fas fa-shopping-bag me-1"></i>
+                                            Shopping</span>
+                                        <span class="badge-custom"><i class="fas fa-theater-masks me-1"></i> Arts</span>
+                                    </div>
+                                    <div class="destination-meta">
+                                        <div>
+                                            <i class="fas fa-clock me-1"></i> 5 days
+                                        </div>
+                                        <div>
+                                            <span class="price fw-bold">$1,099</span> per person
+                                        </div>
+                                    </div>
+                                    <a href="#" class="btn btn-primary w-100 mt-3">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Other continent tabs would go here -->
+                <div class="tab-pane fade" id="europe">European destinations would appear here...</div>
+                <div class="tab-pane fade" id="asia">Asian destinations would appear here...</div>
+                <div class="tab-pane fade" id="americas">American destinations would appear here...</div>
+                <div class="tab-pane fade" id="africa">African destinations would appear here...</div>
+            </div>
+
+            <!-- Pagination -->
+            <nav class="d-flex justify-content-center mt-5">
+                <ul class="pagination">
+                    <li class="page-item"><a class="page-link" href="#"><i class="fas fa-chevron-left"></i></a></li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item active"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#"><i class="fas fa-chevron-right"></i></a></li>
+                </ul>
+            </nav>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h5>ExploreEra</h5>
+                    <p>Making travel dreams come true since 2010. We specialize in creating unforgettable experiences
+                        around the globe.</p>
+                    <div class="social-icons mt-4">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5>Quick Links</h5>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Destinations</a></li>
+                        <li><a href="#">Tours</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5>Support</h5>
+                    <ul>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Booking Policy</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <h5>Contact Info</h5>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt me-2"></i> 123 Travel Street, New York, NY 10001</li>
+                        <li><i class="fas fa-phone me-2"></i> +1 (555) 123-4567</li>
+                        <li><i class="fas fa-envelope me-2"></i> info@exploreera.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p class="mb-0">&copy; 2023 ExploreEra. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

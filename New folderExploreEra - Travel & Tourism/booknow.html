@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Book Now - ExploreEra Travel & Tourism</title>
+        <!-- Bootstrap 5 CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+
+<body>
+        <!-- Navigation -->
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+                <div class="container">
+                        <a class="navbar-brand" href="index.html">
+                                <i class="fas fa-plane me-2"></i>ExploreEra
+                        </a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                                aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                                <ul class="navbar-nav ms-auto">
+                                        <li class="nav-item">
+                                                <a class="nav-link" href="index.html">Home</a>
+                                        </li>
+                                        <li class="nav-item">
+                                                <a class="nav-link" href="Destinations.html">Destinations</a>
+                                        </li>
+                                        <li class="nav-item">
+                                                <a class="nav-link" href="tour.html">Tours</a>
+                                        </li>
+                                        <li class="nav-item">
+                                                <a class="nav-link" href="about.html">About</a>
+                                        </li>
+                                        <li class="nav-item">
+                                                <a class="nav-link" href="contact.html">Contact</a>
+                                        </li>
+                                </ul>
+                                <a href="booknow.html" class="btn btn-primary ms-lg-3 active">Book Now</a>
+                        </div>
+                </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <section class="hero-section">
+                <div class="container">
+                        <h1>Book Your Dream Vacation</h1>
+                        <p>Fill out the form below to start your journey with us.</p>
+                </div>
+        </section>
+
+        <!-- Booking Form Section -->
+        <section class="py-5">
+                <div class="container">
+                        <div class="row justify-content-center">
+                                <div class="col-lg-8">
+                                        <div class="card border-0 shadow-sm">
+                                                <div class="card-body p-5">
+                                                        <form id="bookingForm" class="needs-validation" novalidate>
+                                                                <!-- Personal Information -->
+                                                                <h3 class="mb-4">Personal Information</h3>
+                                                                <div class="row g-3 mb-4">
+                                                                        <div class="col-md-6">
+                                                                                <label for="firstName"
+                                                                                        class="form-label">First
+                                                                                        Name</label>
+                                                                                <input type="text" class="form-control"
+                                                                                        id="firstName" required>
+                                                                        </div>
+                                                                        <div class="col-md-6">
+                                                                                <label for="lastName"
+                                                                                        class="form-label">Last
+                                                                                        Name</label>
+                                                                                <input type="text" class="form-control"
+                                                                                        id="lastName" required>
+                                                                        </div>
+                                                                        <div class="col-md-6">
+                                                                                <label for="email"
+                                                                                        class="form-label">Email</label>
+                                                                                <input type="email" class="form-control"
+                                                                                        id="email" required>
+                                                                        </div>
+                                                                        <div class="col-md-6">
+                                                                                <label for="phone"
+                                                                                        class="form-label">Phone
+                                                                                        Number</label>
+                                                                                <input type="tel" class="form-control"
+                                                                                        id="phone" required>
+                                                                        </div>
+                                                                </div>
+
+                                                                <!-- Trip Details -->
+                                                                <h3 class="mb-4">Trip Details</h3>
+                                                                <div class="row g-3 mb-4">
+                                                                        <div class="col-md-6">
+                                                                                <label for="destination"
+                                                                                        class="form-label">Destination</label>
+                                                                                <select class="form-select"
+                                                                                        id="destination" required>
+                                                                                        <option value="">Choose
+                                                                                                destination...</option>
+                                                                                        <option value="paris">Paris,
+                                                                                                France</option>
+                                                                                        <option value="tokyo">Tokyo,
+                                                                                                Japan</option>
+                                                                                        <option value="rome">Rome, Italy
+                                                                                        </option>
+                                                                                        <option value="bali">Bali,
+                                                                                                Indonesia</option>
+                                                                                        <option value="dubai">Dubai, UAE
+                                                                                        </option>
+                                                                                </select>
+                                                                        </div>
+                                                                        <div class="col-md-6">
+                                                                                <label for="tourPackage"
+                                                                                        class="form-label">Tour
+                                                                                        Package</label>
+                                                                                <select class="form-select"
+                                                                                        id="tourPackage" required>
+                                                                                        <option value="">Select
+                                                                                                package...</option>
+                                                                                        <option value="basic">Basic
+                                                                                                Package</option>
+                                                                                        <option value="standard">
+                                                                                                Standard Package
+                                                                                        </option>
+                                                                                        <option value="premium">Premium
+                                                                                                Package</option>
+                                                                                        <option value="luxury">Luxury
+                                                                                                Package</option>
+                                                                                </select>
+                                                                        </div>
+                                                                        <div class="col-md-6">
+                                                                                <label for="departureDate"
+                                                                                        class="form-label">Departure
+                                                                                        Date</label>
+                                                                                <input type="date" class="form-control"
+                                                                                        id="departureDate" required>
+                                                                        </div>
+                                                                        <div class="col-md-6">
+                                                                                <label for="returnDate"
+                                                                                        class="form-label">Return
+                                                                                        Date</label>
+                                                                                <input type="date" class="form-control"
+                                                                                        id="returnDate" required>
+                                                                        </div>
+                                                                        <div class="col-md-6">
+                                                                                <label for="adults"
+                                                                                        class="form-label">Number of
+                                                                                        Adults</label>
+                                                                                <input type="number"
+                                                                                        class="form-control" id="adults"
+                                                                                        min="1" required>
+                                                                        </div>
+                                                                        <div class="col-md-6">
+                                                                                <label for="children"
+                                                                                        class="form-label">Number of
+                                                                                        Children</label>
+                                                                                <input type="number"
+                                                                                        class="form-control"
+                                                                                        id="children" min="0" value="0">
+                                                                        </div>
+                                                                </div>
+
+                                                                <!-- Preferences -->
+                                                                <h3 class="mb-4">Travel Preferences</h3>
+                                                                <div class="row g-3 mb-4">
+                                                                        <div class="col-md-6">
+                                                                                <label for="accommodation"
+                                                                                        class="form-label">Accommodation
+                                                                                        Type</label>
+                                                                                <select class="form-select"
+                                                                                        id="accommodation" required>
+                                                                                        <option value="">Select
+                                                                                                accommodation...
+                                                                                        </option>
+                                                                                        <option value="hotel">Hotel
+                                                                                        </option>
+                                                                                        <option value="resort">Resort
+                                                                                        </option>
+                                                                                        <option value="villa">Villa
+                                                                                        </option>
+                                                                                        <option value="apartment">
+                                                                                                Apartment</option>
+                                                                                </select>
+                                                                        </div>
+                                                                        <div class="col-md-6">
+                                                                                <label for="roomType"
+                                                                                        class="form-label">Room
+                                                                                        Type</label>
+                                                                                <select class="form-select"
+                                                                                        id="roomType" required>
+                                                                                        <option value="">Select room
+                                                                                                type...</option>
+                                                                                        <option value="single">Single
+                                                                                                Room</option>
+                                                                                        <option value="double">Double
+                                                                                                Room</option>
+                                                                                        <option value="suite">Suite
+                                                                                        </option>
+                                                                                        <option value="family">Family
+                                                                                                Room</option>
+                                                                                </select>
+                                                                        </div>
+                                                                        <div class="col-12">
+                                                                                <label for="specialRequests"
+                                                                                        class="form-label">Special
+                                                                                        Requests</label>
+                                                                                <textarea class="form-control"
+                                                                                        id="specialRequests" rows="3"
+                                                                                        placeholder="Any special requirements or preferences?"></textarea>
+                                                                        </div>
+                                                                </div>
+
+                                                                <!-- Terms and Conditions -->
+                                                                <div class="mb-4">
+                                                                        <div class="form-check">
+                                                                                <input class="form-check-input"
+                                                                                        type="checkbox" id="terms"
+                                                                                        required>
+                                                                                <label class="form-check-label"
+                                                                                        for="terms">
+                                                                                        I agree to the <a href="#">terms
+                                                                                                and conditions</a>
+                                                                                </label>
+                                                                        </div>
+                                                                </div>
+
+                                                                <!-- Submit Button -->
+                                                                <button type="submit"
+                                                                        class="btn btn-primary btn-lg w-100">Proceed to
+                                                                        Payment</button>
+                                                        </form>
+                                                </div>
+                                        </div>
+                                </div>
+                        </div>
+                </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+                <div class="container">
+                        <div class="row">
+                                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                                        <h5>ExploreEra</h5>
+                                        <p class="text-muted">Making world exploration accessible, sustainable, and
+                                                unforgettable for everyone.</p>
+                                        <div class="social-icons">
+                                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                        </div>
+                                </div>
+                                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                                        <h5>Quick Links</h5>
+                                        <ul>
+                                                <li><a href="#">About Us</a></li>
+                                                <li><a href="#">Destinations</a></li>
+                                                <li><a href="#">Tours</a></li>
+                                                <li><a href="#">Contact</a></li>
+                                        </ul>
+                                </div>
+                                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                                        <h5>Contact Info</h5>
+                                        <ul>
+                                                <li><a href="#"><i class="fas fa-map-marker-alt me-2"></i>123 Travel
+                                                                Street, City</a></li>
+                                                <li><a href="#"><i class="fas fa-phone me-2"></i>+1 234 567 890</a></li>
+                                                <li><a href="#"><i
+                                                                        class="fas fa-envelope me-2"></i>info@exploreera.com</a>
+                                                </li>
+                                        </ul>
+                                </div>
+                                <div class="col-lg-3 col-md-6">
+                                        <h5>Newsletter</h5>
+                                        <p class="text-muted">Subscribe to our newsletter for travel updates and special
+                                                offers.</p>
+                                        <form class="mt-3">
+                                                <div class="input-group">
+                                                        <input type="email" class="form-control"
+                                                                placeholder="Enter your email">
+                                                        <button class="btn btn-primary" type="submit">Subscribe</button>
+                                                </div>
+                                        </form>
+                                </div>
+                        </div>
+                        <div class="copyright text-center">
+                                <p>&copy; 2023 ExploreEra. All rights reserved.</p>
+                        </div>
+                </div>
+        </footer>
+
+        <!-- Bootstrap JS Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+        <!-- Form Validation Script -->
+        <script>
+                // Example starter JavaScript for disabling form submissions if there are invalid fields
+                (function () {
+                        'use strict'
+
+                        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                        var forms = document.querySelectorAll('.needs-validation')
+
+                        // Loop over them and prevent submission
+                        Array.prototype.slice.call(forms)
+                                .forEach(function (form) {
+                                        form.addEventListener('submit', function (event) {
+                                                if (!form.checkValidity()) {
+                                                        event.preventDefault()
+                                                        event.stopPropagation()
+                                                }
+
+                                                form.classList.add('was-validated')
+                                        }, false)
+                                })
+                })()
+        </script>
+</body>
+
+</html>
