@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>About Redstore | E-commerce Website</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
+    <style>
+        /* Custom Styles */
+        :root {
+            --primary-color: #ff523b;
+            --secondary-color: #563434;
+            --light-bg: #f8f9fa;
+            --dark-text: #333;
+            --light-text: #6c757d;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--dark-text);
+            overflow-x: hidden;
+        }
+        
+        /* Header Styles */
+        .navbar {
+            background: radial-gradient(#fff, #ffd6d6);
+            padding: 15px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .navbar-brand img {
+            transition: transform 0.3s;
+        }
+        
+        .navbar-brand img:hover {
+            transform: scale(1.05);
+        }
+        
+        .nav-link {
+            font-weight: 500;
+            position: relative;
+            padding: 10px 15px !important;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 15px;
+            width: 0;
+            height: 2px;
+            background: var(--primary-color);
+            transition: width 0.3s;
+        }
+        
+        .nav-link:hover::after,
+        .nav-link.active::after {
+            width: calc(100% - 30px);
+        }
+        
+        /* Hero Section */
+        .about-hero {
+            background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 210, 210, 0.7)), url('assets/images/about-bg.jpg') center/cover no-repeat;
+            padding: 100px 0 70px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .about-hero::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 30px;
+            background: url('assets/images/wave.svg') bottom center/cover no-repeat;
+        }
+        
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: var(--secondary-color);
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.3rem;
+            color: var(--secondary-color);
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+        
+        /* Section Styles */
+        .section-title {
+            position: relative;
+            font-weight: 700;
+            margin-bottom: 40px;
+            padding-bottom: 15px;
+            color: var(--secondary-color);
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 80px;
+            height: 4px;
+            background: var(--primary-color);
+            border-radius: 10px;
+        }
+        
+        .section-title.center::after {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .section-padding {
+            padding: 80px 0;
+        }
+        
+        .bg-light-custom {
+            background-color: #fff8f8 !important;
+        }
+        
+        /* Story Section */
+        .story-content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        .highlight {
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+        
+        /* Mission & Values */
+        .value-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            height: 100%;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            border-top: 4px solid var(--primary-color);
+        }
+        
+        .value-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+        }
+        
+        .value-icon {
+            width: 70px;
+            height: 70px;
+            background: rgba(255, 82, 59, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+            font-size: 28px;
+        }
+        
+        /* Team Section */
+        .team-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+        
+        .team-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+        }
+        
+        .member-photo {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            border-bottom: 3px solid var(--primary-color);
+        }
+        
+        .team-info {
+            padding: 25px;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 15px;
+        }
+        
+        .social-links a {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: #f8f8f8;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-color);
+            transition: all 0.3s;
+        }
+        
+        .social-links a:hover {
+            background: var(--primary-color);
+            color: white;
+            transform: translateY(-3px);
+        }
+        
+        /* Gallery */
+        .gallery-item {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            margin-bottom: 25px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .gallery-item img {
+            transition: transform 0.5s;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        
+        .gallery-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 82, 59, 0.7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+        
+        /* Achievements & Services */
+        .achievement-box, .service-box {
+            text-align: center;
+            padding: 30px 20px;
+            transition: all 0.3s;
+            height: 100%;
+        }
+        
+        .achievement-box {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+        
+        .achievement-icon, .service-icon {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+        
+        .counter {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin: 10px 0;
+        }
+        
+        /* FAQ */
+        .accordion-button {
+            font-weight: 600;
+            padding: 20px;
+        }
+        
+        .accordion-button:not(.collapsed) {
+            background-color: rgba(255, 82, 59, 0.1);
+            color: var(--primary-color);
+        }
+        
+        .accordion-button:focus {
+            box-shadow: none;
+            border-color: rgba(255, 82, 59, 0.2);
+        }
+        
+        .accordion-body {
+            background-color: #f8f8f8;
+        }
+        
+        /* Brands */
+        .brand-logo {
+            filter: grayscale(100%);
+            opacity: 0.7;
+            transition: all 0.3s;
+            max-height: 60px;
+            width: auto;
+        }
+        
+        .brand-logo:hover {
+            filter: grayscale(0);
+            opacity: 1;
+            transform: scale(1.1);
+        }
+        
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .section-padding {
+                padding: 60px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <img src="assets/images/logo.png" alt="Redstore Logo" width="125px">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <div class="mx-auto">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="Product.html">Products</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle active" href="#" id="aboutDropdown" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    About
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+                                    <li><a class="dropdown-item" href="#story">Our Story</a></li>
+                                    <li><a class="dropdown-item" href="#values">Our Values</a></li>
+                                    <li><a class="dropdown-item" href="#team">Our Team</a></li>
+                                    <li><a class="dropdown-item" href="#gallery">Gallery</a></li>
+                                    <li><a class="dropdown-item" href="#achievements">Achievements</a></li>
+                                    <li><a class="dropdown-item" href="#faq">FAQ</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contact.html">Contact</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="account.html">Account</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="cart.html" class="btn btn-primary position-relative ms-3">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                            3
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <!-- Hero Section -->
+    <section class="about-hero text-center">
+        <div class="container">
+            <h1 class="hero-title">Our Story</h1>
+            <p class="hero-subtitle">Discover the journey behind Redstore - where fashion meets passion and quality meets affordability</p>
+            <div class="d-flex justify-content-center gap-3">
+                <a href="#story" class="btn btn-primary btn-lg px-4 py-2">Explore Our Journey</a>
+                <a href="Product.html" class="btn btn-outline-primary btn-lg px-4 py-2">Shop Now</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Main Content -->
+    <main>
+        <!-- Our Story Section -->
+        <section id="story" class="section-padding">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+                        <h2 class="section-title">Our Story</h2>
+                        <div class="story-content">
+                            <p>
+                                Welcome to <span class="highlight">Redstore</span> – your one-stop online shop for fashion-forward apparel and accessories. Founded in 2015, we began as a small boutique with big dreams. Today, we've grown into a beloved brand serving fashion enthusiasts worldwide.
+                            </p>
+                            <p>
+                                Our journey started with a simple idea: create a fashion destination that combines <span class="highlight">quality</span>, <span class="highlight">affordability</span>, and <span class="highlight">customer satisfaction</span>. Each product in our collection is carefully selected to ensure you receive only the best in design and durability. From bold prints to classic cuts, our collections are designed to suit diverse tastes and lifestyles.
+                            </p>
+                            <p>
+                                We're not just an online store—we're a lifestyle brand. Our mission is to make <span class="highlight">shopping simple, enjoyable, and rewarding</span>. With intuitive navigation, detailed product previews, fast checkout, and responsive customer support, Redstore is built to meet your modern shopping needs.
+                            </p>
+                            <div class="row mt-5">
+                                <div class="col-md-4 mb-4 mb-md-0">
+                                    <div class="d-flex align-items-center">
+                                        <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
+                                            <i class="fas fa-calendar-alt"></i>
+                                        </div>
+                                        <div class="ms-3">
+                                            <h5 class="mb-0">Established</h5>
+                                            <p class="mb-0">2015</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-4 mb-md-0">
+                                    <div class="d-flex align-items-center">
+                                        <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
+                                            <i class="fas fa-globe-americas"></i>
+                                        </div>
+                                        <div class="ms-3">
+                                            <h5 class="mb-0">Global Reach</h5>
+                                            <p class="mb-0">50+ Countries</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="d-flex align-items-center">
+                                        <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
+                                            <i class="fas fa-box-open"></i>
+                                        </div>
+                                        <div class="ms-3">
+                                            <h5 class="mb-0">Products</h5>
+                                            <p class="mb-0">1000+ Items</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Mission & Values Section -->
+        <section class="section-padding bg-light-custom">
+            <div class="container">
+                <div class="row mb-5">
+                    <div class="col-md-6">
+                        <h2 class="section-title">Our Mission</h2>
+                        <p class="fs-5">
+                            Our mission is to empower individuals through fashion. We believe everyone deserves to express themselves through their style. We strive to provide a platform that makes this possible while maintaining our commitment to sustainability and ethical practices.
+                        </p>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="ratio ratio-16x9">
+                            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="About Redstore" allowfullscreen class="rounded"></iframe>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-5">
+                    <h2 class="section-title text-center center mb-5">Our Core Values</h2>
+                    <div class="row g-4">
+                        <div class="col-md-6 col-lg-3">
+                            <div class="value-card">
+                                <div class="value-icon">
+                                    <i class="fas fa-handshake"></i>
+                                </div>
+                                <h4>Integrity</h4>
+                                <p>We conduct our business with honesty and transparency, building trust with every interaction.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3">
+                            <div class="value-card">
+                                <div class="value-icon">
+                                    <i class="fas fa-lightbulb"></i>
+                                </div>
+                                <h4>Innovation</h4>
+                                <p>We embrace change and continuously seek new ways to improve our products and services.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3">
+                            <div class="value-card">
+                                <div class="value-icon">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                                <h4>Community</h4>
+                                <p>We are committed to giving back and supporting local initiatives that make a difference.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3">
+                            <div class="value-card">
+                                <div class="value-icon">
+                                    <i class="fas fa-leaf"></i>
+                                </div>
+                                <h4>Sustainability</h4>
+                                <p>We prioritize eco-friendly practices throughout our operations to protect our planet.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Team Section -->
+        <section id="team" class="section-padding">
+            <div class="container">
+                <h2 class="section-title text-center center mb-5">Meet Our Team</h2>
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="team-card">
+                            <img src="assets/images/user-1.png" alt="John Doe" class="member-photo">
+                            <div class="team-info">
+                                <h4>John Doe</h4>
+                                <p class="text-primary fw-medium">CEO & Founder</p>
+                                <p>John is passionate about fashion and leads the team with a vision to innovate and inspire. With 15 years in the industry, he's driven Redstore's growth from day one.</p>
+                                <div class="social-links">
+                                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                    <a href="#"><i class="fab fa-instagram"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="team-card">
+                            <img src="assets/images/user-2.png" alt="Jane Smith" class="member-photo">
+                            <div class="team-info">
+                                <h4>Jane Smith</h4>
+                                <p class="text-primary fw-medium">Marketing Director</p>
+                                <p>Jane drives our marketing with innovative strategies that connect with customers. Her campaigns have increased our customer base by 200% in three years.</p>
+                                <div class="social-links">
+                                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                    <a href="#"><i class="fab fa-instagram"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="team-card">
+                            <img src="assets/images/user-3.png" alt="Michael Johnson" class="member-photo">
+                            <div class="team-info">
+                                <h4>Michael Johnson</h4>
+                                <p class="text-primary fw-medium">Customer Support Manager</p>
+                                <p>Michael ensures smooth customer experiences and handles all support queries. His team maintains our industry-leading 98% customer satisfaction rate.</p>
+                                <div class="social-links">
+                                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                    <a href="#"><i class="fab fa-instagram"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Gallery Section -->
+        <section id="gallery" class="section-padding bg-light-custom">
+            <div class="container">
+                <h2 class="section-title text-center center mb-5">Our Gallery</h2>
+                <div class="row g-4">
+                    <div class="col-md-4 col-6">
+                        <div class="gallery-item">
+                            <img src="assets/images/gallery-1.jpg" alt="Store Interior" class="img-fluid">
+                            <div class="gallery-overlay">
+                                <h5 class="text-white mb-0">Store Interior</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-6">
+                        <div class="gallery-item">
+                            <img src="assets/images/gallery-2.jpg" alt="Product Showcase" class="img-fluid">
+                            <div class="gallery-overlay">
+                                <h5 class="text-white mb-0">Product Showcase</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-6">
+                        <div class="gallery-item">
+                            <img src="assets/images/gallery-3.jpg" alt="Team Meeting" class="img-fluid">
+                            <div class="gallery-overlay">
+                                <h5 class="text-white mb-0">Team Meeting</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-6">
+                        <div class="gallery-item">
+                            <img src="assets/images/gallery-4.jpg" alt="Fashion Event" class="img-fluid">
+                            <div class="gallery-overlay">
+                                <h5 class="text-white mb-0">Fashion Event</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-6">
+                        <div class="gallery-item">
+                            <img src="assets/images/gallery-5.jpg" alt="Warehouse" class="img-fluid">
+                            <div class="gallery-overlay">
+                                <h5 class="text-white mb-0">Warehouse</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-6">
+                        <div class="gallery-item">
+                            <img src="assets/images/gallery-6.jpg" alt="Customer Experience" class="img-fluid">
+                            <div class="gallery-overlay">
+                                <h5 class="text-white mb-0">Customer Experience</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Achievements Section -->
+        <section id="achievements" class="section-padding">
+            <div class="container">
+                <h2 class="section-title text-center center mb-5">Our Achievements</h2>
+                <div class="row g-4">
+                    <div class="col-md-3 col-sm-6">
+                        <div class="achievement-box">
+                            <i class="fas fa-award achievement-icon"></i>
+                            <div class="counter">12</div>
+                            <h5>Industry Awards</h5>
+                            <p>Recognized for excellence in e-commerce and customer service.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="achievement-box">
+                            <i class="fas fa-users achievement-icon"></i>
+                            <div class="counter">1M+</div>
+                            <h5>Satisfied Customers</h5>
+                            <p>Over one million customers trust Redstore for fashion.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="achievement-box">
+                            <i class="fas fa-truck achievement-icon"></i>
+                            <div class="counter">98%</div>
+                            <h5>On-time Delivery</h5>
+                            <p>Average delivery time of 48 hours across all regions.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="achievement-box">
+                            <i class="fas fa-leaf achievement-icon"></i>
+                            <div class="counter">85%</div>
+                            <h5>Sustainable Materials</h5>
+                            <p>Eco-friendly sourcing and packaging in our operations.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Services Section -->
+        <section class="section-padding bg-primary bg-opacity-10">
+            <div class="container">
+                <h2 class="section-title text-center center mb-5">Our Services</h2>
+                <div class="row g-4">
+                    <div class="col-md-3 col-sm-6">
+                        <div class="service-box">
+                            <i class="fas fa-shipping-fast service-icon"></i>
+                            <h4>Fast Shipping</h4>
+                            <p>Quick and reliable delivery to your doorstep within 48 hours.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="service-box">
+                            <i class="fas fa-sync-alt service-icon"></i>
+                            <h4>Easy Returns</h4>
+                            <p>30-day hassle-free returns and exchanges policy.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="service-box">
+                            <i class="fas fa-headset service-icon"></i>
+                            <h4>24/7 Support</h4>
+                            <p>Friendly customer support available around the clock.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="service-box">
+                            <i class="fas fa-gift service-icon"></i>
+                            <h4>Gift Services</h4>
+                            <p>Special packaging and personalized messages for gifts.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- FAQ Section -->
+        <section id="faq" class="section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <h2 class="section-title text-center center mb-5">Frequently Asked Questions</h2>
+                        <div class="accordion" id="faqAccordion">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="faq1">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1"
+                                        aria-expanded="true" aria-controls="collapse1">
+                                        How do I place an order?
+                                    </button>
+                                </h2>
+                                <div id="collapse1" class="accordion-collapse collapse show" aria-labelledby="faq1"
+                                    data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        Placing an order is simple! Browse our products, add items to your cart, and proceed to checkout by creating or logging into your account. Follow the steps to enter your shipping information and payment details to complete your purchase.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="faq2">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2"
+                                        aria-expanded="false" aria-controls="collapse2">
+                                        What payment methods do you accept?
+                                    </button>
+                                </h2>
+                                <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="faq2"
+                                    data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        We accept all major credit/debit cards (Visa, MasterCard, American Express), PayPal, Apple Pay, Google Pay, and bank transfers. All transactions are securely processed through our payment gateway.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="faq3">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3"
+                                        aria-expanded="false" aria-controls="collapse3">
+                                        How can I track my order?
+                                    </button>
+                                </h2>
+                                <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="faq3"
+                                    data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        Once your order is shipped, you will receive a confirmation email with a tracking number and link. You can also log into your account on our website to view your order status and tracking information in real-time.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="faq4">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4"
+                                        aria-expanded="false" aria-controls="collapse4">
+                                        What is your return policy?
+                                    </button>
+                                </h2>
+                                <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="faq4"
+                                    data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        We offer a 30-day hassle-free return policy. Items must be unworn, unwashed, and with original tags attached. Simply initiate a return through your account, print the return label, and ship the item back to us. Refunds are processed within 3-5 business days after we receive your return.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="faq5">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5"
+                                        aria-expanded="false" aria-controls="collapse5">
+                                        Do you ship internationally?
+                                    </button>
+                                </h2>
+                                <div id="collapse5" class="accordion-collapse collapse" aria-labelledby="faq5"
+                                    data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        Yes, we ship to over 100 countries worldwide. International shipping rates and delivery times vary depending on the destination. You can view shipping options and costs during checkout before completing your purchase.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Brands Section -->
+        <section class="py-5">
+            <div class="container">
+                <h2 class="section-title text-center center mb-5">Trusted By</h2>
+                <div class="row g-4 align-items-center justify-content-center">
+                    <div class="col-lg-2 col-md-3 col-4">
+                        <img src="assets/images/logo-coca-cola.png" class="img-fluid brand-logo" alt="Coca-Cola">
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-4">
+                        <img src="assets/images/logo-godrej.png" class="img-fluid brand-logo" alt="Godrej">
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-4">
+                        <img src="assets/images/logo-oppo.png" class="img-fluid brand-logo" alt="Oppo">
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-4">
+                        <img src="assets/images/logo-paypal.png" class="img-fluid brand-logo" alt="PayPal">
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-4">
+                        <img src="assets/images/logo-philips.png" class="img-fluid brand-logo" alt="Philips">
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-4">
+                        <img src="assets/images/logo-white.png" class="img-fluid brand-logo" alt="Redstore">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="footer bg-dark text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+                    <h3>Download Our App</h3>
+                    <p>Get exclusive app-only deals and early access to new collections.</p>
+                    <div class="app-logo">
+                        <img src="assets/images/play-store.png" class="img-fluid me-2 mb-2" alt="Play Store">
+                        <img src="assets/images/app-store.png" class="img-fluid" alt="App Store">
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+                    <img src="assets/images/logo-white.png" class="img-fluid mb-3" alt="Logo" width="140">
+                    <p>Our purpose is to make your shopping easy, affordable, and enjoyable with the latest fashion trends.</p>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+                    <h3>Useful Links</h3>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white text-decoration-none">Coupons</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Blog Post</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Return Policy</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Join Affiliate</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+                    <h3>Follow Us</h3>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white text-decoration-none"><i class="fa-brands fa-facebook me-2"></i>Facebook</a></li>
+                        <li><a href="#" class="text-white text-decoration-none"><i class="fa-brands fa-twitter me-2"></i>Twitter</a></li>
+                        <li><a href="#" class="text-white text-decoration-none"><i class="fa-brands fa-instagram me-2"></i>Instagram</a></li>
+                        <li><a href="#" class="text-white text-decoration-none"><i class="fa-brands fa-youtube me-2"></i>YouTube</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="bg-light">
+            <p class="text-center mb-0">&copy; 2023 Redstore. All rights reserved</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Add active class to current page in navbar
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentPage = window.location.pathname.split('/').pop();
+            const navLinks = document.querySelectorAll('.nav-link');
+            
+            navLinks.forEach(link => {
+                if (link.getAttribute('href') === currentPage) {
+                    link.classList.add('active');
+                }
+            });
+            
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        window.scrollTo({
+                            top: target.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

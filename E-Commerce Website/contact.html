@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Redstore | E-commerce Website</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+                integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+                crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="assets/css/style.css" />
+
+</head>
+
+<body>
+        <header>
+                <nav class="navbar navbar-expand-lg navbar-light ">
+                        <div class="container">
+                                <a class="navbar-brand" href="index.html"><img src="/assets/images/logo.png" alt=""
+                                                width="125px"></a>
+                                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                                        aria-label="Toggle navigation">
+                                        <span class="navbar-toggler-icon"></span>
+                                </button>
+                                <div class="collapse navbar-collapse" id="navbarNav">
+                                        <div class="mx-auto">
+                                                <ul class="navbar-nav">
+                                                        <li class="nav-item">
+                                                                <a class="nav-link active" aria-current="page"
+                                                                        href="index.html">Home</a>
+                                                        </li>
+                                                        <li class="nav-item">
+                                                                <a class="nav-link" href="Product.html">Products</a>
+                                                        </li>
+                                                        <li class="nav-item">
+                                                                <a class="nav-link" href="about.html">About</a>
+                                                        </li>
+                                                        <li class="nav-item">
+                                                                <a class="nav-link" href="contact.html">Contact</a>
+                                                        </li>
+                                                        <li class="nav-item">
+                                                                <a class="nav-link" href="account.html">Account</a>
+                                                        </li>
+                                                </ul>
+                                        </div>
+                                        <a href="cart.html" class="ms-auto"><img src="assets/images/cart.png"
+                                                        width="30px" height="30px" alt="" /></a>
+                                </div>
+                        </div>
+                </nav>
+
+        </header>
+
+        <main>
+                <!-- Contact Section -->
+                <div class="contact">
+                        <div class="container py-5">
+                                <div class="row">
+                                        <!-- Contact Information -->
+                                        <div class="col-lg-6 mb-4">
+                                                <h1 class="text">Contact Us</h1>
+                                                <p>If you have any questions, feedback, or issues, feel free to reach
+                                                        out to us through any of the methods below.</p>
+
+                                                <h3 class="text">Our Office</h3>
+                                                <p>
+                                                        Redstore Headquarters<br>
+                                                        123 Fashion Street,<br>
+                                                        New Delhi, India - 110001<br>
+                                                        Phone: +91 98765 43210<br>
+                                                        Email: support@redstore.com
+                                                </p>
+
+                                                <h3 class="text">Working Hours</h3>
+                                                <p>
+                                                        Monday - Friday: 9:00 AM - 6:00 PM<br>
+                                                        Saturday: 10:00 AM - 4:00 PM<br>
+                                                        Sunday: Closed
+                                                </p>
+
+                                                <h3 class="text">Send Us a Message</h3>
+                                                <form action="#" method="post">
+                                                        <div class="mb-3">
+                                                                
+                                                                <input type="text" name="name" class="form-control"
+                                                                        placeholder="Your Name" required>
+                                                        </div>
+                                                        <div class="mb-3">
+                                                                <input type="email" name="email" class="form-control"
+                                                                        placeholder="Your Email" required>
+                                                        </div>
+                                                        <div class="mb-3">
+                                                                <textarea name="message" class="form-control" rows="5"
+                                                                        placeholder="Your Message" required></textarea>
+                                                        </div>
+                                                        <button type="submit" class="btn">Submit</button>
+                                                </form>
+                                        </div>
+
+                                        <!-- Map Section -->
+                                        <div class="col-lg-6">
+                                                <h3 class="text">Find Us on the Map</h3>
+                                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14014.934448697532!2d77.2159276!3d28.6141795!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce2b301f5e4c5%3A0x4e4d9d7a943b06b9!2sConnaught%20Place%2C%20New%20Delhi!5e0!3m2!1sen!2sin!4v1610000000000!5m2!1sen!2sin"
+                                                        width="100%" height="400" frameborder="0" style="border:0;"
+                                                        allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                                        </div>
+                                </div>
+                        </div>
+                </div>
+                <!-- FAQ Section -->
+                <div class="container my-5">
+                        <h2 class="mb-4">Frequently Asked Questions (FAQ)</h2>
+
+                        <div class="accordion" id="faqAccordion">
+                                <div class="accordion-item">
+                                        <h2 class="accordion-header" id="faq1">
+                                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                                        data-bs-target="#collapse1" aria-expanded="true"
+                                                        aria-controls="collapse1">
+                                                        <strong>How do I place an order?</strong>
+                                                </button>
+                                        </h2>
+                                        <div id="collapse1" class="accordion-collapse collapse show"
+                                                aria-labelledby="faq1" data-bs-parent="#faqAccordion">
+                                                <div class="accordion-body">
+                                                        You can browse our products, add items to your cart, and proceed
+                                                        to checkout by creating or logging into your account.
+                                                </div>
+                                        </div>
+                                </div>
+
+                                <div class="accordion-item">
+                                        <h2 class="accordion-header" id="faq2">
+                                                <button class="accordion-button collapsed" type="button"
+                                                        data-bs-toggle="collapse" data-bs-target="#collapse2"
+                                                        aria-expanded="false" aria-controls="collapse2">
+                                                        <strong>What payment methods do you accept?</strong>
+                                                </button>
+                                        </h2>
+                                        <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="faq2"
+                                                data-bs-parent="#faqAccordion">
+                                                <div class="accordion-body">
+                                                        We accept all major credit/debit cards, UPI, net banking, and
+                                                        wallet payments like Paytm and Google Pay.
+                                                </div>
+                                        </div>
+                                </div>
+
+                                <div class="accordion-item">
+                                        <h2 class="accordion-header" id="faq3">
+                                                <button class="accordion-button collapsed" type="button"
+                                                        data-bs-toggle="collapse" data-bs-target="#collapse3"
+                                                        aria-expanded="false" aria-controls="collapse3">
+                                                        <strong>How can I track my order?</strong>
+                                                </button>
+                                        </h2>
+                                        <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="faq3"
+                                                data-bs-parent="#faqAccordion">
+                                                <div class="accordion-body">
+                                                        Once your order is shipped, you will receive a tracking link via
+                                                        email or SMS. You can also check it under your account orders
+                                                        section.
+                                                </div>
+                                        </div>
+                                </div>
+
+                                <div class="accordion-item">
+                                        <h2 class="accordion-header" id="faq4">
+                                                <button class="accordion-button collapsed" type="button"
+                                                        data-bs-toggle="collapse" data-bs-target="#collapse4"
+                                                        aria-expanded="false" aria-controls="collapse4">
+                                                        <strong>Can I return or exchange a product?</strong>
+                                                </button>
+                                        </h2>
+                                        <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="faq4"
+                                                data-bs-parent="#faqAccordion">
+                                                <div class="accordion-body">
+                                                        Yes, we offer easy returns and exchanges within 7 days of
+                                                        delivery. Please check our return policy for full details.
+                                                </div>
+                                        </div>
+                                </div>
+
+                                <div class="accordion-item">
+                                        <h2 class="accordion-header" id="faq5">
+                                                <button class="accordion-button collapsed" type="button"
+                                                        data-bs-toggle="collapse" data-bs-target="#collapse5"
+                                                        aria-expanded="false" aria-controls="collapse5">
+                                                        <strong>Is there customer support?</strong>
+                                                </button>
+                                        </h2>
+                                        <div id="collapse5" class="accordion-collapse collapse" aria-labelledby="faq5"
+                                                data-bs-parent="#faqAccordion">
+                                                <div class="accordion-body">
+                                                        Yes! You can reach our support team through email or the contact
+                                                        form above. We're here to help Monday to Saturday.
+                                                </div>
+                                        </div>
+                                </div>
+                        </div>
+                </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer bg-dark text-white py-5">
+                <div class="container">
+                        <div class="row">
+                                <!-- Column 1 -->
+                                <div class="col col-lg-3 col-md-6 col-sm-12 mb-4">
+                                        <h3>Download Our App</h3>
+                                        <p>Download the app for Android and iOS.</p>
+                                        <div class="app-logo">
+                                                <img src="assets/images/play-store.png" class="img-fluid me-2"
+                                                        alt="Play Store" />
+                                                <img src="assets/images/app-store.png" class="img-fluid"
+                                                        alt="App Store" />
+                                        </div>
+                                </div>
+                                <!-- Column 2 -->
+                                <div class="col col-lg-3 col-md-6 col-sm-12 mb-4">
+                                        <img src="assets/images/logo-white.png" class="img-fluid mb-3" alt="Logo" />
+                                        <p>Our purpose is to make your shopping easy, affordable, and enjoyable.</p>
+                                </div>
+                                <!-- Column 3 -->
+                                <div class="col col-lg-3 col-md-6 col-sm-12 mb-4">
+                                        <h3>Useful Links</h3>
+                                        <ul class="list-unstyled">
+                                                <li><a href="#" class="text-white text-decoration-none">Coupons</a></li>
+                                                <li><a href="#" class="text-white text-decoration-none">Blog Post</a>
+                                                </li>
+                                                <li><a href="#" class="text-white text-decoration-none">Return
+                                                                Policy</a></li>
+                                                <li><a href="#" class="text-white text-decoration-none">Join
+                                                                Affiliate</a></li>
+                                        </ul>
+                                </div>
+                                <!-- Column 4 -->
+                                <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+                                        <h3>Follow Us</h3>
+                                        <ul class="list-unstyled">
+                                                <li><a href="#" class="text-white text-decoration-none"><i
+                                                                        class="fa-brands fa-facebook me-2"></i></i>Facebook</a>
+                                                </li>
+                                                <li><a href="#" class="text-white text-decoration-none"><i
+                                                                        class="fa-brands fa-twitter me-2"></i>Twitter</a>
+                                                </li>
+                                                <li><a href="#" class="text-white text-decoration-none"><i
+                                                                        class="fa-brands fa-instagram me-2"></i>Instagram</a>
+                                                </li>
+                                                <li><a href="#" class="text-white text-decoration-none"><i
+                                                                        class="fa-brands fa-youtube me-2"></i>YouTube</a>
+                                                </li>
+                                        </ul>
+                                </div>
+                        </div>
+                        <hr class="bg-light" />
+                        <p class="text-center mb-0">&copy; 2020 All rights reserved</p>
+                </div>
+        </footer>
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
