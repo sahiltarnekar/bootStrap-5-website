@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart - TechSphere</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+   <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="navbar navbar-expand-lg py-3">
+            <div class="container">
+                <a class="navbar-brand logo" href="#">Tech<span>Sphere</span></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="Products.html">Products</a></li>
+                        <li class="nav-item"><a class="nav-link" href="Categories.html">Categories</a></li>
+                        <li class="nav-item"><a class="nav-link" href="Deals.html">Deals</a></li>
+                        <li class="nav-item"><a class="nav-link" href="NewArivals.html">New Arrivals</a></li>
+                        <li class="nav-item"><a class="nav-link" href="support.html">Support</a></li>
+                    </ul>
+                    <div class="d-flex align-items-center">
+                        <a href="search.html" class="mx-2 text-dark position-relative">
+                            <i class="bi bi-search fs-5"></i>
+                        </a>
+                        <a href="#" class="mx-2 text-dark position-relative">
+                            <i class="bi bi-heart fs-5"></i>
+                            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="font-size:0.6rem">2</span>
+                        </a>
+                        <a href="cart.html" class="mx-2 text-dark position-relative">
+                            <i class="bi bi-cart3 fs-5"></i>
+                            <span class="cart-badge position-absolute bg-danger text-white rounded-circle d-flex align-items-center justify-content-center" style="width:22px;height:22px">3</span>
+                        </a>
+                        <a href="account.html" class="mx-2 text-dark">
+                            <i class="bi bi-person-circle fs-4"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="display-5 fw-bold">Your Shopping Cart</h1>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="index.html" class="text-white">Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Cart</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cart Section -->
+    <section class="cart-container">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <!-- Cart Items -->
+                    <div class="cart-card p-4">
+                        <div class="d-flex justify-content-between align-items-center mb-4">
+                            <h3 class="h5 fw-bold mb-0">3 Items in Cart</h3>
+                            <a href="#" class="text-danger small">Clear Cart</a>
+                        </div>
+                        
+                        <!-- Cart Item 1 -->
+                        <div class="row align-items-center py-3 border-bottom">
+                            <div class="col-3 col-md-2">
+                                <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Headphones" class="cart-item-img">
+                            </div>
+                            <div class="col-9 col-md-4">
+                                <h5 class="fw-bold mb-1">Premium Wireless Headphones</h5>
+                                <p class="text-muted small mb-0">Color: Black</p>
+                                <p class="text-muted small">Active noise cancellation</p>
+                            </div>
+                            <div class="col-6 col-md-2">
+                                <div class="quantity-control">
+                                    <div class="quantity-btn">-</div>
+                                    <input type="text" class="quantity-input" value="1">
+                                    <div class="quantity-btn">+</div>
+                                </div>
+                            </div>
+                            <div class="col-4 col-md-2 text-end">
+                                <h5 class="fw-bold mb-0">$129.99</h5>
+                                <p class="text-success small mb-0">In Stock</p>
+                            </div>
+                            <div class="col-2 col-md-2 text-end">
+                                <button class="remove-btn">
+                                    <i class="bi bi-trash fs-5"></i>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <!-- Cart Item 2 -->
+                        <div class="row align-items-center py-3 border-bottom">
+                            <div class="col-3 col-md-2">
+                                <img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Smartwatch" class="cart-item-img">
+                            </div>
+                            <div class="col-9 col-md-4">
+                                <h5 class="fw-bold mb-1">Smart Watch Pro Series 5</h5>
+                                <p class="text-muted small mb-0">Color: Midnight Blue</p>
+                                <p class="text-muted small">Health monitoring</p>
+                            </div>
+                            <div class="col-6 col-md-2">
+                                <div class="quantity-control">
+                                    <div class="quantity-btn">-</div>
+                                    <input type="text" class="quantity-input" value="1">
+                                    <div class="quantity-btn">+</div>
+                                </div>
+                            </div>
+                            <div class="col-4 col-md-2 text-end">
+                                <h5 class="fw-bold mb-0">$199.99</h5>
+                                <p class="text-success small mb-0">In Stock</p>
+                            </div>
+                            <div class="col-2 col-md-2 text-end">
+                                <button class="remove-btn">
+                                    <i class="bi bi-trash fs-5"></i>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <!-- Cart Item 3 -->
+                        <div class="row align-items-center py-3">
+                            <div class="col-3 col-md-2">
+                                <img src="https://images.unsplash.com/photo-1598327105666-5b89351aff97?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Phone" class="cart-item-img">
+                            </div>
+                            <div class="col-9 col-md-4">
+                                <h5 class="fw-bold mb-1">Smartphone X Pro</h5>
+                                <p class="text-muted small mb-0">Color: Graphite</p>
+                                <p class="text-muted small">128GB Storage</p>
+                            </div>
+                            <div class="col-6 col-md-2">
+                                <div class="quantity-control">
+                                    <div class="quantity-btn">-</div>
+                                    <input type="text" class="quantity-input" value="1">
+                                    <div class="quantity-btn">+</div>
+                                </div>
+                            </div>
+                            <div class="col-4 col-md-2 text-end">
+                                <h5 class="fw-bold mb-0">$899.99</h5>
+                                <p class="text-warning small mb-0">Low Stock</p>
+                            </div>
+                            <div class="col-2 col-md-2 text-end">
+                                <button class="remove-btn">
+                                    <i class="bi bi-trash fs-5"></i>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-4 pt-3 border-top d-flex justify-content-between">
+                            <a href="#" class="continue-shopping">
+                                <i class="bi bi-arrow-left"></i> Continue Shopping
+                            </a>
+                            <button class="btn btn-outline-primary">Update Cart</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Shipping Options -->
+                    <div class="cart-card p-4">
+                        <h3 class="h5 fw-bold mb-4">Shipping Options</h3>
+                        
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="radio" name="shipping" id="standard" checked>
+                            <label class="form-check-label d-flex justify-content-between w-100" for="standard">
+                                <div>
+                                    <h6 class="mb-0 fw-bold">Standard Shipping</h6>
+                                    <p class="small mb-0 text-muted">3-5 business days</p>
+                                </div>
+                                <span class="fw-bold">Free</span>
+                            </label>
+                        </div>
+                        
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="radio" name="shipping" id="express">
+                            <label class="form-check-label d-flex justify-content-between w-100" for="express">
+                                <div>
+                                    <h6 class="mb-0 fw-bold">Express Shipping</h6>
+                                    <p class="small mb-0 text-muted">1-2 business days</p>
+                                </div>
+                                <span class="fw-bold">$9.99</span>
+                            </label>
+                        </div>
+                        
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="shipping" id="overnight">
+                            <label class="form-check-label d-flex justify-content-between w-100" for="overnight">
+                                <div>
+                                    <h6 class="mb-0 fw-bold">Overnight Shipping</h6>
+                                    <p class="small mb-0 text-muted">Next business day</p>
+                                </div>
+                                <span class="fw-bold">$19.99</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Order Summary -->
+                <div class="col-lg-4">
+                    <div class="summary-card">
+                        <h3 class="h5 fw-bold mb-4">Order Summary</h3>
+                        
+                        <div class="summary-item">
+                            <span>Subtotal</span>
+                            <span class="fw-bold">$1,229.97</span>
+                        </div>
+                        
+                        <div class="summary-item">
+                            <span>Shipping</span>
+                            <span class="fw-bold">Free</span>
+                        </div>
+                        
+                        <div class="summary-item">
+                            <span>Estimated Tax</span>
+                            <span class="fw-bold">$73.80</span>
+                        </div>
+                        
+                        <div class="summary-item pb-3 mb-3 border-bottom">
+                            <span>Discount</span>
+                            <span class="fw-bold text-success">-$25.00</span>
+                        </div>
+                        
+                        <div class="d-flex justify-content-between mb-4">
+                            <span class="summary-total">Total</span>
+                            <span class="summary-total">$1,278.77</span>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label class="form-label fw-bold mb-2">Apply Coupon</label>
+                            <div class="d-flex gap-2">
+                                <input type="text" class="coupon-input" placeholder="Enter coupon code">
+                                <button class="btn btn-outline-primary">Apply</button>
+                            </div>
+                        </div>
+                        
+                        <button class="btn-checkout w-100 mb-3">
+                            <i class="bi bi-lock-fill me-2"></i> Proceed to Checkout
+                        </button>
+                        
+                        <div class="text-center mt-4">
+                            <p class="small text-muted mb-1">We accept:</p>
+                            <div class="d-flex justify-content-center gap-2">
+                                <i class="bi bi-credit-card fs-4"></i>
+                                <i class="bi bi-paypal fs-4"></i>
+                                <i class="bi bi-google-play fs-4"></i>
+                                <i class="bi bi-apple fs-4"></i>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Security Info -->
+                    <div class="cart-card p-4 mt-4">
+                        <div class="d-flex align-items-start">
+                            <i class="bi bi-shield-check text-primary fs-3 me-3"></i>
+                            <div>
+                                <h6 class="fw-bold mb-1">Secure Payment</h6>
+                                <p class="small mb-0 text-muted">All transactions are secure and encrypted</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="pt-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <h4 class="mb-4 logo">TechSphere</h4>
+                    <p class="text-white-50">Premium electronics store offering cutting-edge technology with exceptional customer service.</p>
+                    <div class="d-flex gap-3 mt-4">
+                        <a href="#" class="social-link"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="bi bi-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-6">
+                    <h5 class="mb-4">Quick Links</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li class="mb-2"><a href="index.html" class="text-white-50">Home</a></li>
+                        <li class="mb-2"><a href="Products.html" class="text-white-50">Products</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50">About Us</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50">Contact</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50">FAQs</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-6">
+                    <h5 class="mb-4">Categories</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li class="mb-2"><a href="#" class="text-white-50">Smartphones</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50">Laptops</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50">Headphones</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50">Cameras</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50">Accessories</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h5 class="mb-4">Newsletter</h5>
+                    <p class="text-white-50">Subscribe for updates and special offers</p>
+                    <div class="input-group mb-3">
+                        <input type="email" class="form-control newsletter-input" placeholder="Email address" style="background: rgba(255,255,255,0.1); border: none; color: white;">
+                        <button class="btn btn-primary" type="button">Subscribe</button>
+                    </div>
+                    <div class="d-flex gap-2">
+                        <i class="bi bi-credit-card fs-4 text-white-50"></i>
+                        <i class="bi bi-paypal fs-4 text-white-50"></i>
+                        <i class="bi bi-google-play fs-4 text-white-50"></i>
+                        <i class="bi bi-apple fs-4 text-white-50"></i>
+                    </div>
+                </div>
+            </div>
+            <hr class="mt-5 border-secondary">
+            <div class="py-4 text-center text-white-50">
+                &copy; 2023 TechSphere. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Cart functionality -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Quantity buttons
+            document.querySelectorAll('.quantity-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const input = this.parentNode.querySelector('.quantity-input');
+                    let value = parseInt(input.value);
+                    
+                    if(this.textContent === '+') {
+                        value = isNaN(value) ? 1 : value + 1;
+                    } else if(this.textContent === '-') {
+                        value = isNaN(value) || value <= 1 ? 1 : value - 1;
+                    }
+                    
+                    input.value = value;
+                });
+            });
+            
+            // Remove item buttons
+            document.querySelectorAll('.remove-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const item = this.closest('.row');
+                    item.style.opacity = 0;
+                    setTimeout(() => {
+                        item.remove();
+                        updateCartCount();
+                    }, 300);
+                });
+            });
+            
+            function updateCartCount() {
+                const count = document.querySelectorAll('.cart-card .row:not(.d-flex)').length;
+                document.querySelector('.cart-badge').textContent = count;
+                document.querySelector('.cart-card h3').textContent = count + ' Item' + (count !== 1 ? 's' : '') + ' in Cart';
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Account - TechSphere</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="navbar navbar-expand-lg py-3">
+            <div class="container">
+                <a class="navbar-brand logo" href="index.html">Tech<span>Sphere</span></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="Products.html">Products</a></li>
+                        <li class="nav-item"><a class="nav-link" href="Categories.html">Categories</a></li>
+                        <li class="nav-item"><a class="nav-link" href="Deals.html">Deals</a></li>
+                        <li class="nav-item"><a class="nav-link" href="NewArivals.html">New Arrivals</a></li>
+                        <li class="nav-item"><a class="nav-link" href="support.html">Support</a></li>
+                    </ul>
+                    <div class="d-flex align-items-center">
+                        <a href="search.html" class="mx-2 text-dark position-relative">
+                            <i class="bi bi-search fs-5"></i>
+                        </a>
+                        <a href="wishlist.html" class="mx-2 text-dark position-relative">
+                            <i class="bi bi-heart fs-5"></i>
+                            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="font-size:0.6rem">2</span>
+                        </a>
+                        <a href="cart.html" class="mx-2 text-dark position-relative">
+                            <i class="bi bi-cart3 fs-5"></i>
+                            <span class="cart-badge position-absolute bg-danger text-white rounded-circle d-flex align-items-center justify-content-center" style="width:22px;height:22px">3</span>
+                        </a>
+                        <a href="account.html" class="mx-2 text-dark">
+                            <i class="bi bi-person-circle fs-4"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="display-5 fw-bold">My Account</h1>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="index.html" class="text-white">Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Account</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Account Section -->
+    <section class="account-container">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="account-card account-sidebar">
+                        <div class="avatar mb-4">
+                            <i class="bi bi-person-circle"></i>
+                        </div>
+                        <h3 class="h5 fw-bold mb-3">John Anderson</h3>
+                        <p class="text-muted mb-4">john.anderson@example.com</p>
+                        
+                        <ul class="account-nav">
+                            <li><a href="#" class="active" data-target="dashboard"><i class="bi bi-house-door"></i> Dashboard</a></li>
+                            <li><a href="#" data-target="orders"><i class="bi bi-bag"></i> Orders</a></li>
+                            <li><a href="#" data-target="addresses"><i class="bi bi-geo-alt"></i> Addresses</a></li>
+                            <li><a href="#" data-target="payments"><i class="bi bi-credit-card"></i> Payment Methods</a></li>
+                            <li><a href="#" data-target="account"><i class="bi bi-person"></i> Account Details</a></li>
+                            <li><a href="#" data-target="wishlist"><i class="bi bi-heart"></i> Wishlist <span class="badge bg-danger ms-2">2</span></a></li>
+                            <li><a href="index.html"><i class="bi bi-box-arrow-right"></i> Logout</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-lg-8">
+                    <!-- Dashboard Section -->
+                    <div class="account-section active" id="dashboard">
+                        <div class="account-card">
+                            <h2 class="h4 fw-bold mb-4">Dashboard</h2>
+                            <div class="alert alert-primary d-flex align-items-center" role="alert">
+                                <i class="bi bi-info-circle me-2"></i>
+                                <div>Hello <strong>John Anderson</strong>! From your account dashboard you can view your orders, manage your addresses, and edit your account details.</div>
+                            </div>
+                            
+                            <div class="row mt-4">
+                                <div class="col-md-4 mb-4">
+                                    <div class="text-center p-4 border rounded-3 bg-light">
+                                        <div class="text-primary mb-2">
+                                            <i class="bi bi-bag fs-1"></i>
+                                        </div>
+                                        <h3 class="h5 fw-bold">Orders</h3>
+                                        <p class="mb-0">5 orders placed</p>
+                                        <a href="#" class="btn btn-outline-primary mt-2" data-target="orders">View Orders</a>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-4">
+                                    <div class="text-center p-4 border rounded-3 bg-light">
+                                        <div class="text-primary mb-2">
+                                            <i class="bi bi-geo-alt fs-1"></i>
+                                        </div>
+                                        <h3 class="h5 fw-bold">Addresses</h3>
+                                        <p class="mb-0">2 saved addresses</p>
+                                        <a href="#" class="btn btn-outline-primary mt-2" data-target="addresses">Manage</a>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-4">
+                                    <div class="text-center p-4 border rounded-3 bg-light">
+                                        <div class="text-primary mb-2">
+                                            <i class="bi bi-heart fs-1"></i>
+                                        </div>
+                                        <h3 class="h5 fw-bold">Wishlist</h3>
+                                        <p class="mb-0">2 items saved</p>
+                                        <a href="#" class="btn btn-outline-primary mt-2" data-target="wishlist">View Wishlist</a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <h3 class="h5 fw-bold mt-5 mb-4">Recent Orders</h3>
+                            <div class="order-card">
+                                <div class="d-flex justify-content-between mb-3">
+                                    <div>
+                                        <strong>Order #:</strong> TS-2023-1542
+                                    </div>
+                                    <div class="order-status status-delivered">Delivered</div>
+                                </div>
+                                <div class="order-product">
+                                    <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Headphones" class="order-product-img">
+                                    <div>
+                                        <h6 class="fw-bold mb-1">Premium Wireless Headphones</h6>
+                                        <p class="text-muted small mb-0">Qty: 1</p>
+                                        <p class="text-muted small mb-0">$129.99</p>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center mt-3">
+                                    <div>
+                                        <strong>Total:</strong> $129.99
+                                    </div>
+                                    <div>
+                                        <strong>Date:</strong> Oct 12, 2023
+                                    </div>
+                                    <a href="#" class="btn btn-sm btn-outline-primary">View Order</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Orders Section -->
+                    <div class="account-section" id="orders">
+                        <div class="account-card">
+                            <div class="account-header">
+                                <div>
+                                    <h2 class="h4 fw-bold mb-0">My Orders</h2>
+                                    <p class="text-muted mb-0">View your order history and track shipments</p>
+                                </div>
+                            </div>
+                            
+                            <div class="order-card">
+                                <div class="d-flex justify-content-between mb-3">
+                                    <div>
+                                        <strong>Order #:</strong> TS-2023-1542
+                                    </div>
+                                    <div class="order-status status-delivered">Delivered</div>
+                                </div>
+                                <div class="order-product">
+                                    <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Headphones" class="order-product-img">
+                                    <div>
+                                        <h6 class="fw-bold mb-1">Premium Wireless Headphones</h6>
+                                        <p class="text-muted small mb-0">Qty: 1</p>
+                                        <p class="text-muted small mb-0">$129.99</p>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center mt-3">
+                                    <div>
+                                        <strong>Total:</strong> $129.99
+                                    </div>
+                                    <div>
+                                        <strong>Date:</strong> Oct 12, 2023
+                                    </div>
+                                    <a href="#" class="btn btn-sm btn-outline-primary">View Details</a>
+                                </div>
+                            </div>
+                            
+                            <div class="order-card">
+                                <div class="d-flex justify-content-between mb-3">
+                                    <div>
+                                        <strong>Order #:</strong> TS-2023-1487
+                                    </div>
+                                    <div class="order-status status-shipped">Shipped</div>
+                                </div>
+                                <div class="order-product">
+                                    <img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Smartwatch" class="order-product-img">
+                                    <div>
+                                        <h6 class="fw-bold mb-1">Smart Watch Pro Series 5</h6>
+                                        <p class="text-muted small mb-0">Qty: 1</p>
+                                        <p class="text-muted small mb-0">$199.99</p>
+                                    </div>
+                                </div>
+                                <div class="order-product">
+                                    <img src="https://images.unsplash.com/photo-1598327105666-5b89351aff97?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Charger" class="order-product-img">
+                                    <div>
+                                        <h6 class="fw-bold mb-1">Fast Wireless Charger</h6>
+                                        <p class="text-muted small mb-0">Qty: 1</p>
+                                        <p class="text-muted small mb-0">$29.99</p>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center mt-3">
+                                    <div>
+                                        <strong>Total:</strong> $229.98
+                                    </div>
+                                    <div>
+                                        <strong>Date:</strong> Oct 5, 2023
+                                    </div>
+                                    <a href="#" class="btn btn-sm btn-outline-primary">Track Order</a>
+                                </div>
+                            </div>
+                            
+                            <div class="order-card">
+                                <div class="d-flex justify-content-between mb-3">
+                                    <div>
+                                        <strong>Order #:</strong> TS-2023-1365
+                                    </div>
+                                    <div class="order-status status-processing">Processing</div>
+                                </div>
+                                <div class="order-product">
+                                    <img src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Laptop" class="order-product-img">
+                                    <div>
+                                        <h6 class="fw-bold mb-1">Ultrabook Pro 14"</h6>
+                                        <p class="text-muted small mb-0">Qty: 1</p>
+                                        <p class="text-muted small mb-0">$1,299.99</p>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center mt-3">
+                                    <div>
+                                        <strong>Total:</strong> $1,299.99
+                                    </div>
+                                    <div>
+                                        <strong>Date:</strong> Sep 28, 2023
+                                    </div>
+                                    <a href="#" class="btn btn-sm btn-outline-primary">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Addresses Section -->
+                    <div class="account-section" id="addresses">
+                        <div class="account-card">
+                            <div class="account-header">
+                                <div>
+                                    <h2 class="h4 fw-bold mb-0">My Addresses</h2>
+                                    <p class="text-muted mb-0">Manage your shipping addresses</p>
+                                </div>
+                                <button class="btn btn-primary">Add New Address</button>
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col-md-6 mb-4">
+                                    <div class="border p-4 rounded-3 h-100">
+                                        <div class="d-flex justify-content-between align-items-start mb-3">
+                                            <h5 class="fw-bold mb-0">John Anderson</h5>
+                                            <span class="badge bg-primary">Default</span>
+                                        </div>
+                                        <p class="mb-1">123 Main Street</p>
+                                        <p class="mb-1">Apt 4B</p>
+                                        <p class="mb-1">New York, NY 10001</p>
+                                        <p class="mb-1">United States</p>
+                                        <p class="mb-3">Phone: (555) 123-4567</p>
+                                        <div class="d-flex gap-2">
+                                            <button class="btn btn-outline">Edit</button>
+                                            <button class="btn btn-outline">Delete</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-4">
+                                    <div class="border p-4 rounded-3 h-100">
+                                        <div class="d-flex justify-content-between align-items-start mb-3">
+                                            <h5 class="fw-bold mb-0">John Anderson</h5>
+                                        </div>
+                                        <p class="mb-1">456 Oak Avenue</p>
+                                        <p class="mb-1">Suite 200</p>
+                                        <p class="mb-1">San Francisco, CA 94103</p>
+                                        <p class="mb-1">United States</p>
+                                        <p class="mb-3">Phone: (555) 987-6543</p>
+                                        <div class="d-flex gap-2">
+                                            <button class="btn btn-outline">Edit</button>
+                                            <button class="btn btn-outline">Delete</button>
+                                            <button class="btn btn-outline">Set as Default</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Payment Methods Section -->
+                    <div class="account-section" id="payments">
+                        <div class="account-card">
+                            <div class="account-header">
+                                <div>
+                                    <h2 class="h4 fw-bold mb-0">Payment Methods</h2>
+                                    <p class="text-muted mb-0">Manage your saved payment methods</p>
+                                </div>
+                                <button class="btn btn-primary">Add Payment Method</button>
+                            </div>
+                            
+                            <div class="payment-card">
+                                <span class="default-badge">Default</span>
+                                <div class="d-flex align-items-center mb-3">
+                                    <i class="bi bi-credit-card fs-2 me-3 text-primary"></i>
+                                    <div>
+                                        <h5 class="fw-bold mb-0">Visa ending in 4321</h5>
+                                        <p class="text-muted mb-0">Expires 05/2025</p>
+                                    </div>
+                                </div>
+                                <div class="d-flex gap-2">
+                                    <button class="btn btn-outline">Edit</button>
+                                    <button class="btn btn-outline">Remove</button>
+                                </div>
+                            </div>
+                            
+                            <div class="payment-card">
+                                <div class="d-flex align-items-center mb-3">
+                                    <i class="bi bi-paypal fs-2 me-3 text-primary"></i>
+                                    <div>
+                                        <h5 class="fw-bold mb-0">PayPal</h5>
+                                        <p class="text-muted mb-0">john.anderson@example.com</p>
+                                    </div>
+                                </div>
+                                <div class="d-flex gap-2">
+                                    <button class="btn btn-outline">Set as Default</button>
+                                    <button class="btn btn-outline">Remove</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Account Details Section -->
+                    <div class="account-section" id="account">
+                        <div class="account-card">
+                            <div class="account-header">
+                                <div>
+                                    <h2 class="h4 fw-bold mb-0">Account Details</h2>
+                                    <p class="text-muted mb-0">Update your personal information</p>
+                                </div>
+                            </div>
+                            
+                            <form>
+                                <div class="mb-4">
+                                    <label class="form-label">Avatar</label>
+                                    <div class="d-flex align-items-center">
+                                        <div class="avatar me-4">
+                                            <i class="bi bi-person-circle"></i>
+                                        </div>
+                                        <div>
+                                            <input type="file" class="form-control" accept="image/*">
+                                            <div class="form-text">JPG, GIF or PNG. Max size of 1MB</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label class="form-label">First Name</label>
+                                        <input type="text" class="form-control" value="John">
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label class="form-label">Last Name</label>
+                                        <input type="text" class="form-control" value="Anderson">
+                                    </div>
+                                </div>
+                                
+                                <div class="mb-3">
+                                    <label class="form-label">Email Address</label>
+                                    <input type="email" class="form-control" value="john.anderson@example.com">
+                                </div>
+                                
+                                <div class="mb-3">
+                                    <label class="form-label">Phone Number</label>
+                                    <input type="tel" class="form-control" value="(555) 123-4567">
+                                </div>
+                                
+                                <div class="mb-4">
+                                    <label class="form-label">Bio</label>
+                                    <textarea class="form-control" rows="3">Tech enthusiast and gadget lover. Always looking for the latest innovations!</textarea>
+                                </div>
+                                
+                                <div class="d-flex justify-content-end gap-3">
+                                    <button type="reset" class="btn btn-outline">Cancel</button>
+                                    <button type="submit" class="btn btn-save">Save Changes</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    
+                    <!-- Wishlist Section -->
+                    <div class="account-section" id="wishlist">
+                        <div class="account-card">
+                            <div class="account-header">
+                                <div>
+                                    <h2 class="h4 fw-bold mb-0">My Wishlist</h2>
+                                    <p class="text-muted mb-0">2 items saved for later</p>
+                                </div>
+                            </div>
+                            
+                            <div class="wishlist-grid">
+                                <div class="wishlist-item">
+                                    <div class="remove-wishlist">
+                                        <i class="bi bi-x-lg"></i>
+                                    </div>
+                                    <img src="https://images.unsplash.com/photo-1504274066651-8d31a536b11a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Wireless Headphones" class="img-fluid">
+                                    <div class="p-3">
+                                        <h5 class="fw-bold mb-1">Premium Wireless Headphones</h5>
+                                        <div class="text-warning mb-2">
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-half"></i>
+                                            <span class="ms-1">4.5</span>
+                                        </div>
+                                        <h5 class="text-primary fw-bold">$129.99</h5>
+                                        <div class="d-flex gap-2 mt-3">
+                                            <button class="btn btn-primary w-100">Add to Cart</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="wishlist-item">
+                                    <div class="remove-wishlist">
+                                        <i class="bi bi-x-lg"></i>
+                                    </div>
+                                    <img src="https://images.unsplash.com/photo-1592899677977-9c10ca588bbd?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Smart Watch" class="img-fluid">
+                                    <div class="p-3">
+                                        <h5 class="fw-bold mb-1">Smart Watch Pro Series 5</h5>
+                                        <div class="text-warning mb-2">
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star"></i>
+                                            <span class="ms-1">4.0</span>
+                                        </div>
+                                        <h5 class="text-primary fw-bold">$199.99</h5>
+                                        <div class="d-flex gap-2 mt-3">
+                                            <button class="btn btn-primary w-100">Add to Cart</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="pt-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <h4 class="mb-4 logo">TechSphere</h4>
+                    <p class="text-white-50">Premium electronics store offering cutting-edge technology with exceptional customer service.</p>
+                    <div class="d-flex gap-3 mt-4">
+                        <a href="#" class="social-link"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="bi bi-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-6">
+                    <h5 class="mb-4">Quick Links</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li class="mb-2"><a href="index.html" class="text-white-50">Home</a></li>
+                        <li class="mb-2"><a href="Products.html" class="text-white-50">Products</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50">About Us</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50">Contact</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50">FAQs</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-6">
+                    <h5 class="mb-4">Categories</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li class="mb-2"><a href="#" class="text-white-50">Smartphones</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50">Laptops</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50">Headphones</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50">Cameras</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50">Accessories</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h5 class="mb-4">Newsletter</h5>
+                    <p class="text-white-50">Subscribe for updates and special offers</p>
+                    <div class="input-group mb-3">
+                        <input type="email" class="form-control" placeholder="Email address" style="background: rgba(255,255,255,0.1); border: none; color: white;">
+                        <button class="btn btn-primary" type="button">Subscribe</button>
+                    </div>
+                    <div class="d-flex gap-2">
+                        <i class="bi bi-credit-card fs-4 text-white-50"></i>
+                        <i class="bi bi-paypal fs-4 text-white-50"></i>
+                        <i class="bi bi-google-play fs-4 text-white-50"></i>
+                        <i class="bi bi-apple fs-4 text-white-50"></i>
+                    </div>
+                </div>
+            </div>
+            <hr class="mt-5 border-secondary">
+            <div class="py-4 text-center text-white-50">
+                &copy; 2023 TechSphere. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Account Page Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Navigation functionality
+            const navLinks = document.querySelectorAll('.account-nav a');
+            const sections = document.querySelectorAll('.account-section');
+            
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    // Remove active class from all links
+                    navLinks.forEach(navLink => navLink.classList.remove('active'));
+                    
+                    // Add active class to clicked link
+                    this.classList.add('active');
+                    
+                    // Get target section ID
+                    const targetId = this.getAttribute('data-target');
+                    
+                    // Hide all sections
+                    sections.forEach(section => section.classList.remove('active'));
+                    
+                    // Show target section
+                    document.getElementById(targetId).classList.add('active');
+                });
+            });
+            
+            // Dashboard card navigation
+            const dashboardLinks = document.querySelectorAll('.btn[data-target]');
+            dashboardLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    // Get target section ID
+                    const targetId = this.getAttribute('data-target');
+                    
+                    // Remove active class from all nav links
+                    navLinks.forEach(navLink => navLink.classList.remove('active'));
+                    
+                    // Add active class to target nav link
+                    document.querySelector(`.account-nav a[data-target="${targetId}"]`).classList.add('active');
+                    
+                    // Hide all sections
+                    sections.forEach(section => section.classList.remove('active'));
+                    
+                    // Show target section
+                    document.getElementById(targetId).classList.add('active');
+                    
+                    // Scroll to top of section
+                    document.getElementById(targetId).scrollIntoView({behavior: 'smooth'});
+                });
+            });
+            
+            // Wishlist remove functionality
+            document.querySelectorAll('.remove-wishlist').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const item = this.closest('.wishlist-item');
+                    item.style.opacity = 0;
+                    setTimeout(() => {
+                        item.remove();
+                    }, 300);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
